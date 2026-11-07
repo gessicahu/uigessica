@@ -1,6 +1,6 @@
 {
-  "name": "iPhone 13 Mini Wireframe",
-  "description": "Applicazione wireframe mobile in bianco e nero in formato iPhone 13 mini con due pagine collegate.",
+  "name": "iPhone 14 Pro Wireframe",
+  "description": "Applicazione wireframe mobile in bianco e nero in formato iPhone 14 Pro con due pagine collegate e Dynamic Island.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

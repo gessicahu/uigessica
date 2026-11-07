@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iPhone 13 Mini Wireframe</title>
-    <meta name="description" content="Applicazione mobile wireframe in bianco e nero in formato iPhone 13 mini con due pagine collegate." />
-    <meta property="og:title" content="iPhone 13 Mini Wireframe" />
-    <meta property="og:description" content="Applicazione mobile wireframe in bianco e nero in formato iPhone 13 mini con due pagine collegate." />
+    <title>iPhone 14 Pro Wireframe</title>
+    <meta name="description" content="Applicazione mobile wireframe in bianco e nero in formato iPhone 14 Pro con due pagine collegate." />
+    <meta property="og:title" content="iPhone 14 Pro Wireframe" />
+    <meta property="og:description" content="Applicazione mobile wireframe in bianco e nero in formato iPhone 14 Pro con due pagine collegate." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -22,19 +22,10 @@
         margin: 0;
         padding: 0;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        background-color: #f4f4f4;
+        background-color: #f8f9fa;
         color: #000000;
         user-select: none;
         -webkit-user-select: none;
-      }
-      .grid-bg {
-        background-image: 
-          linear-gradient(to right, #d1d5db 1px, transparent 1px),
-          linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
-        background-size: 20px 20px;
-      }
-      .brutalist-shadow {
-        box-shadow: 4px 4px 0px 0px #000000;
       }
       .brutalist-shadow-lg {
         box-shadow: 8px 8px 0px 0px #000000;
@@ -70,284 +61,138 @@
       }
     </style>
   </head>
-  <body class="min-h-screen w-full flex flex-col items-center justify-between p-2 sm:p-4 relative overflow-x-hidden">
-    <!-- Wireframe blueprint grid background -->
-    <div class="grid-bg fixed inset-0 pointer-events-none opacity-40 z-0"></div>
-
-    <!-- Top wireframe meta-bar / inspector -->
-    <header class="relative z-10 w-full max-w-4xl flex flex-wrap items-center justify-between gap-3 border-2 border-black bg-white p-2.5 sm:px-4 text-xs brutalist-shadow">
-      <div class="flex items-center gap-2">
-        <div class="w-3 h-3 border-2 border-black bg-black"></div>
-        <span class="font-bold tracking-tight uppercase">Wireframe Prototype</span>
-        <span class="border border-black px-1.5 py-0.5 text-[11px] bg-neutral-100">
-          iPhone 13 mini [375 × 812 pt]
-        </span>
+  <body class="min-h-screen w-full flex items-center justify-center p-4 sm:p-8">
+    <!-- Smartphone iPhone 14 Pro Chassis (intatto e inalterato) -->
+    <div
+      id="device-frame"
+      class="relative w-[415px] h-[874px] p-[10px] bg-white border-4 border-black rounded-[60px] brutalist-shadow-lg shrink-0 my-auto"
+    >
+      <!-- Hardware buttons on chassis (iPhone 14 Pro layout) -->
+      <div id="hardware-buttons">
+        <!-- Ring / Silent switch -->
+        <div class="absolute -left-[9px] top-[116px] w-[5px] h-[28px] bg-white border-2 border-black rounded-l"></div>
+        <!-- Volume Up -->
+        <div class="absolute -left-[9px] top-[162px] w-[5px] h-[52px] bg-white border-2 border-black rounded-l"></div>
+        <!-- Volume Down -->
+        <div class="absolute -left-[9px] top-[228px] w-[5px] h-[52px] bg-white border-2 border-black rounded-l"></div>
+        <!-- Side Power button -->
+        <div class="absolute -right-[9px] top-[178px] w-[5px] h-[72px] bg-white border-2 border-black rounded-r"></div>
       </div>
 
-      <div class="flex items-center gap-2 sm:gap-3">
-        <div class="flex items-center gap-1.5 border border-black px-2 py-1 bg-white">
-          <span class="text-[11px] text-neutral-600">Stato:</span>
-          <span id="page-status-badge" class="font-bold">Pagina 1 di 2</span>
-        </div>
+      <!-- Screen Viewport: Exactly 393x852 pt with 52px corner radius -->
+      <div
+        id="screen-viewport"
+        class="w-[393px] h-[852px] bg-white relative overflow-hidden flex flex-col justify-between rounded-[52px] border-2 border-black"
+      >
+        <!-- iPhone 14 Pro Status Bar & Dynamic Island (Top Bar ~54px) -->
+        <div class="relative w-full h-[54px] flex items-center justify-between px-7 pt-3 z-30 select-none bg-white">
+          <!-- Clock -->
+          <span class="text-[14px] font-bold tracking-tight">9:41</span>
 
-        <div class="flex items-center gap-1">
-          <button
-            type="button"
-            id="toggle-rulers-btn"
-            class="border border-black px-2 py-1 text-[11px] flex items-center gap-1 bg-black text-white cursor-pointer transition-colors"
-            title="Mostra / Nascondi quote dimensionali"
-          >
-            Quote: <span id="ruler-state-label">ON</span>
-          </button>
-          <button
-            type="button"
-            id="toggle-view-btn"
-            class="border border-black px-2 py-1 text-[11px] flex items-center gap-1 bg-white text-black hover:bg-neutral-100 cursor-pointer"
-            title="Commuta tra vista dispositivo e vista piena"
-          >
-            <span id="view-mode-label">Vista Piena</span>
-          </button>
-          <button
-            type="button"
-            id="reset-btn"
-            class="border border-black px-2 py-1 text-[11px] flex items-center gap-1 bg-white text-black hover:bg-neutral-100 cursor-pointer"
-            title="Ricomincia da Pagina 1"
-          >
-            ↺ Reset
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="relative z-10 flex-1 flex flex-col items-center justify-center my-4 w-full">
-      <div class="relative flex items-center justify-center">
-        <!-- Dimensional rulers for iPhone 13 mini -->
-        <div id="rulers-container">
-          <!-- Width dimension top -->
-          <div class="absolute -top-7 left-0 right-0 flex items-center justify-center text-[10px] text-neutral-600 pointer-events-none">
-            <span class="border-t border-b border-black w-10 mr-1"></span>
-            <span class="font-bold border border-black bg-white px-1">W: 375 pt (1080 px @3x)</span>
-            <span class="border-t border-b border-black w-10 ml-1"></span>
-          </div>
-          <!-- Height dimension right -->
-          <div class="absolute -right-16 top-0 bottom-0 hidden md:flex flex-col items-center justify-center text-[10px] text-neutral-600 pointer-events-none">
-            <span class="h-12 border-l border-r border-black mb-1"></span>
-            <span class="font-bold border border-black bg-white px-1 py-2 rotate-90 my-2 whitespace-nowrap">
-              H: 812 pt
-            </span>
-            <span class="h-12 border-l border-r border-black mt-1"></span>
-          </div>
-        </div>
-
-        <!-- Device Mockup Shell (iPhone 13 mini) -->
-        <div
-          id="device-frame"
-          class="transition-all duration-200 relative w-[393px] h-[830px] p-[9px] bg-white border-4 border-black rounded-[50px] brutalist-shadow-lg"
-        >
-          <!-- Hardware buttons on device chassis -->
-          <div id="hardware-buttons">
-            <!-- Silent switch -->
-            <div class="absolute -left-[9px] top-[110px] w-[5px] h-[26px] bg-white border-2 border-black rounded-l"></div>
-            <!-- Volume Up -->
-            <div class="absolute -left-[9px] top-[150px] w-[5px] h-[48px] bg-white border-2 border-black rounded-l"></div>
-            <!-- Volume Down -->
-            <div class="absolute -left-[9px] top-[210px] w-[5px] h-[48px] bg-white border-2 border-black rounded-l"></div>
-            <!-- Power Button -->
-            <div class="absolute -right-[9px] top-[165px] w-[5px] h-[64px] bg-white border-2 border-black rounded-r"></div>
+          <!-- Dynamic Island Wireframe (Pill shape: 126px × 35px) -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-[11px] w-[126px] h-[35px] bg-white border-2 border-black rounded-full flex items-center justify-between px-3">
+            <!-- TrueDepth front camera lens -->
+            <div class="w-3 h-3 border-2 border-black rounded-full flex items-center justify-center">
+              <div class="w-1 h-1 bg-black rounded-full"></div>
+            </div>
+            <!-- Ambient sensor / FaceID illuminator -->
+            <div class="w-2 h-2 border border-black rounded-full bg-black"></div>
           </div>
 
-          <!-- Screen Viewport: Exactly 375x812 pt -->
-          <div
-            id="screen-viewport"
-            class="w-[375px] h-[812px] bg-white relative overflow-hidden flex flex-col justify-between rounded-[42px] border-2 border-black"
-          >
-            <!-- iPhone 13 mini Notch & Wireframe Status Bar -->
-            <div class="relative w-full h-[44px] flex items-center justify-between px-6 pt-2 z-30 select-none bg-white">
-              <!-- Clock -->
-              <span class="text-[12px] font-bold tracking-tight">9:41</span>
-
-              <!-- iPhone 13 mini Notch (26mm wide, ~154px) -->
-              <div class="absolute left-1/2 -translate-x-1/2 top-0 w-[154px] h-[28px] bg-white border-b-2 border-l-2 border-r-2 border-black rounded-b-2xl flex items-center justify-center">
-                <!-- Ear speaker -->
-                <div class="w-12 h-1 bg-black rounded-full mb-1"></div>
-                <!-- Camera lens -->
-                <div class="w-2.5 h-2.5 border-2 border-black rounded-full ml-2 mb-1"></div>
+          <!-- Status Bar Indicators (Signal, WiFi, Battery) -->
+          <div class="flex items-center gap-1.5 text-[11px]">
+            <!-- Cellular signal 4 bars -->
+            <div class="flex items-end gap-[1.5px] h-3">
+              <span class="w-[2.5px] h-1 border border-black bg-black"></span>
+              <span class="w-[2.5px] h-1.5 border border-black bg-black"></span>
+              <span class="w-[2.5px] h-2.5 border border-black bg-black"></span>
+              <span class="w-[2.5px] h-3 border border-black bg-white"></span>
+            </div>
+            <!-- Wifi wireframe -->
+            <div class="w-3.5 h-3 border-b-2 border-black flex items-center justify-center">
+              <div class="w-2 h-2 border-t-2 border-black rounded-t-full"></div>
+            </div>
+            <!-- Battery capsule wireframe -->
+            <div class="flex items-center">
+              <div class="w-5 h-2.5 border-2 border-black rounded-[3px] p-[1px] flex">
+                <div class="h-full w-3/4 bg-black"></div>
               </div>
-
-              <!-- Status Bar Indicators (Signal, WiFi, Battery) -->
-              <div class="flex items-center gap-1.5 text-[11px]">
-                <!-- Cellular signal -->
-                <div class="flex items-end gap-[1.5px] h-3">
-                  <span class="w-[2px] h-1 border border-black bg-black"></span>
-                  <span class="w-[2px] h-1.5 border border-black bg-black"></span>
-                  <span class="w-[2px] h-2.5 border border-black bg-black"></span>
-                  <span class="w-[2px] h-3 border border-black bg-white"></span>
-                </div>
-                <!-- Wifi wireframe -->
-                <div class="w-3.5 h-3 border-b-2 border-black flex items-center justify-center">
-                  <div class="w-2 h-2 border-t-2 border-black rounded-t-full"></div>
-                </div>
-                <!-- Battery wireframe -->
-                <div class="flex items-center">
-                  <div class="w-5 h-2.5 border-2 border-black rounded-[2px] p-[1px] flex">
-                    <div class="h-full w-3/4 bg-black"></div>
-                  </div>
-                  <div class="w-[1.5px] h-1 bg-black ml-[0.5px]"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Screen Content Area: Due pagine vuote con solo il rispettivo bottone -->
-            <div class="relative flex-1 w-full overflow-hidden bg-white">
-              <!-- Pagina 1: con dentro SOLO un bottone con scritto "avanti" -->
-              <section
-                id="page-1"
-                class="page-transition page-active absolute inset-0 w-full h-full bg-white flex flex-col items-center justify-center p-6"
-              >
-                <button
-                  type="button"
-                  id="btn-avanti"
-                  class="brutalist-btn group cursor-pointer px-10 py-4 bg-white text-black border-2 border-black font-mono font-bold text-lg tracking-wider uppercase hover:bg-black hover:text-white flex items-center gap-3"
-                >
-                  <span>avanti</span>
-                  <span class="text-xl transition-transform group-hover:translate-x-1">&rarr;</span>
-                </button>
-              </section>
-
-              <!-- Pagina 2: con dentro SOLO un bottone con scritto "indietro" -->
-              <section
-                id="page-2"
-                class="page-transition page-hidden-right absolute inset-0 w-full h-full bg-white flex flex-col items-center justify-center p-6"
-              >
-                <button
-                  type="button"
-                  id="btn-indietro"
-                  class="brutalist-btn group cursor-pointer px-10 py-4 bg-white text-black border-2 border-black font-mono font-bold text-lg tracking-wider uppercase hover:bg-black hover:text-white flex items-center gap-3"
-                >
-                  <span class="text-xl transition-transform group-hover:-translate-x-1">&larr;</span>
-                  <span>indietro</span>
-                </button>
-              </section>
-            </div>
-
-            <!-- iOS Home Indicator (Wireframe bar) -->
-            <div class="w-full h-[28px] flex items-center justify-center pb-2 z-30 bg-white">
-              <div class="w-[134px] h-[4px] bg-black rounded-full"></div>
+              <div class="w-[1.5px] h-1 bg-black ml-[0.5px]"></div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
 
-    <!-- Footer Wireframe Legend / Info -->
-    <footer class="relative z-10 w-full max-w-4xl flex flex-wrap items-center justify-between gap-2 border border-black bg-white px-3 py-2 text-[11px] text-neutral-700 brutalist-shadow">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full border border-black bg-black inline-block"></span>
-        <span>Single-file Wireframe HTML5 statico pronto per GitHub Pages.</span>
+        <!-- Screen Content Area: Due pagine vuote con solo il rispettivo bottone -->
+        <div class="relative flex-1 w-full overflow-hidden bg-white">
+          <!-- Pagina 1: con dentro SOLO un bottone con scritto "avanti" -->
+          <section
+            id="page-1"
+            class="page-transition page-active absolute inset-0 w-full h-full bg-white flex flex-col items-center justify-center p-6"
+          >
+            <button
+              type="button"
+              id="btn-avanti"
+              class="brutalist-btn group cursor-pointer px-10 py-4 bg-white text-black border-2 border-black font-mono font-bold text-lg tracking-wider uppercase hover:bg-black hover:text-white flex items-center gap-3"
+            >
+              <span>avanti</span>
+              <span class="text-xl transition-transform group-hover:translate-x-1">&rarr;</span>
+            </button>
+          </section>
+
+          <!-- Pagina 2: con dentro SOLO un bottone con scritto "indietro" -->
+          <section
+            id="page-2"
+            class="page-transition page-hidden-right absolute inset-0 w-full h-full bg-white flex flex-col items-center justify-center p-6"
+          >
+            <button
+              type="button"
+              id="btn-indietro"
+              class="brutalist-btn group cursor-pointer px-10 py-4 bg-white text-black border-2 border-black font-mono font-bold text-lg tracking-wider uppercase hover:bg-black hover:text-white flex items-center gap-3"
+            >
+              <span class="text-xl transition-transform group-hover:-translate-x-1">&larr;</span>
+              <span>indietro</span>
+            </button>
+          </section>
+        </div>
+
+        <!-- iOS Home Indicator (Wireframe bar: 138px x 4px) -->
+        <div class="w-full h-[32px] flex items-center justify-center pb-2 z-30 bg-white">
+          <div class="w-[138px] h-[4px] bg-black rounded-full"></div>
+        </div>
       </div>
-      <div class="text-neutral-500 font-mono">
-        Formato: iPhone 13 mini (375 &times; 812 pt)
-      </div>
-    </footer>
+    </div>
 
     <!-- Native Vanilla JavaScript logic (No frameworks, no modules, 100% self-contained) -->
     <script>
       (function() {
-        // Elements
         const page1 = document.getElementById('page-1');
         const page2 = document.getElementById('page-2');
         const btnAvanti = document.getElementById('btn-avanti');
         const btnIndietro = document.getElementById('btn-indietro');
-        const pageStatusBadge = document.getElementById('page-status-badge');
-        const toggleRulersBtn = document.getElementById('toggle-rulers-btn');
-        const rulerStateLabel = document.getElementById('ruler-state-label');
-        const rulersContainer = document.getElementById('rulers-container');
-        const toggleViewBtn = document.getElementById('toggle-view-btn');
-        const viewModeLabel = document.getElementById('view-mode-label');
-        const deviceFrame = document.getElementById('device-frame');
-        const screenViewport = document.getElementById('screen-viewport');
-        const hardwareButtons = document.getElementById('hardware-buttons');
-        const resetBtn = document.getElementById('reset-btn');
 
-        let currentPage = 1;
-        let rulersVisible = true;
-        let isFillScreen = false;
-
-        function updateView() {
-          if (currentPage === 1) {
-            // Show Page 1, hide Page 2
+        function showPage(pageNumber) {
+          if (pageNumber === 1) {
             page1.classList.remove('page-hidden-left', 'page-hidden-right');
             page1.classList.add('page-active');
 
             page2.classList.remove('page-active');
             page2.classList.add('page-hidden-right');
-
-            pageStatusBadge.textContent = 'Pagina 1 di 2';
           } else {
-            // Show Page 2, hide Page 1
             page2.classList.remove('page-hidden-left', 'page-hidden-right');
             page2.classList.add('page-active');
 
             page1.classList.remove('page-active');
             page1.classList.add('page-hidden-left');
-
-            pageStatusBadge.textContent = 'Pagina 2 di 2';
           }
         }
 
-        // Navigation listeners
         btnAvanti.addEventListener('click', function() {
-          currentPage = 2;
-          updateView();
+          showPage(2);
         });
 
         btnIndietro.addEventListener('click', function() {
-          currentPage = 1;
-          updateView();
+          showPage(1);
         });
-
-        resetBtn.addEventListener('click', function() {
-          currentPage = 1;
-          updateView();
-        });
-
-        // Toggle rulers
-        toggleRulersBtn.addEventListener('click', function() {
-          rulersVisible = !rulersVisible;
-          if (rulersVisible && !isFillScreen) {
-            rulersContainer.style.display = 'block';
-            toggleRulersBtn.classList.remove('bg-white', 'text-black');
-            toggleRulersBtn.classList.add('bg-black', 'text-white');
-            rulerStateLabel.textContent = 'ON';
-          } else {
-            rulersContainer.style.display = 'none';
-            toggleRulersBtn.classList.remove('bg-black', 'text-white');
-            toggleRulersBtn.classList.add('bg-white', 'text-black');
-            rulerStateLabel.textContent = 'OFF';
-          }
-        });
-
-        // Toggle view (device frame vs pure screen)
-        toggleViewBtn.addEventListener('click', function() {
-          isFillScreen = !isFillScreen;
-          if (isFillScreen) {
-            viewModeLabel.textContent = 'Vista Telefono';
-            hardwareButtons.style.display = 'none';
-            rulersContainer.style.display = 'none';
-            deviceFrame.className = 'transition-all duration-200 relative w-[375px] h-[812px] p-0 bg-white border-2 border-black brutalist-shadow';
-            screenViewport.className = 'w-[375px] h-[812px] bg-white relative overflow-hidden flex flex-col justify-between';
-          } else {
-            viewModeLabel.textContent = 'Vista Piena';
-            hardwareButtons.style.display = 'block';
-            if (rulersVisible) rulersContainer.style.display = 'block';
-            deviceFrame.className = 'transition-all duration-200 relative w-[393px] h-[830px] p-[9px] bg-white border-4 border-black rounded-[50px] brutalist-shadow-lg';
-            screenViewport.className = 'w-[375px] h-[812px] bg-white relative overflow-hidden flex flex-col justify-between rounded-[42px] border-2 border-black';
-          }
-        });
-
-        // Initialize state
-        updateView();
       })();
     </script>
   </body>
